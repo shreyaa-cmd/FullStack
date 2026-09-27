@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            @layer base, special, morespecial;
+            @layer base {
+                .para {
+                    font-size: 20px;
+                    color: red;
+                }
+            }
+            @layer special {
+                .highlight-para {
+                    font-size: 30px;
+                    color: blue;
+                }
+            }
+            @layer morespecial {
+                .highlight-para {
+                    font-size: 40px;
+                    color: green;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <p class="para highlight-para"> 
+            Hello World!
+        </p>
+    </body>
+</html>

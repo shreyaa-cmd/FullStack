@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body {
+                color: yellow;
+                background-color: black;
+            }
+
+            p {
+                font-size: 20px;
+            }
+            
+           @media (min-width: 801px) {
+                p {
+                    font-size: 60px;
+                    color: yellow;
+                    background-color: black;
+                }
+
+                /* Nested AND this query */
+                @media (any-hover: hover) {
+                    p:hover {
+                        color: black;
+                        background-color: yellow;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            @media (max-width: 800px) {
+                p {
+                    font-size: 100px;
+                    color: pink;
+                    background-color: black;
+                }
+
+                /* Nested AND this query */
+                @media (any-hover: hover) {
+                    p:hover {
+                        color: black;
+                        background-color: pink;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <p> Hello World! </p>
+    </body>
+</html>

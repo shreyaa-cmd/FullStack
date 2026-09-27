@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data structures and types</title>
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #1b1d1f; color: #f7f7f7; font-family: Arial, Helvetica, sans-serif; font-size: 20px; line-height: 1.75; }
+    .topbar { height: 80px; border-bottom: 1px solid #4c5054; display: flex; align-items: center; gap: 30px; padding: 0 12px; white-space: nowrap; overflow: hidden; }
+    .nav-link { color: #fff; text-decoration: none; font-weight: 500; line-height: 1; }
+    .nav-link:hover, a:hover { color: #8ab4f8; }
+    .chevron { display: inline-block; width: 10px; height: 10px; margin: 0 3px 5px 5px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); }
+    .topic-bar { height: 40px; border-bottom: 1px solid #4c5054; padding-left: 50px; display: flex; align-items: center; color: #f8f8f8; font-size: 19px; font-weight: 600; }
+    .page { display: flex; min-height: calc(100vh - 120px); }
+    .rail { width: 7px; background: #8d8f91; border-radius: 0 5px 5px 0; margin-top: 48px; height: 370px; flex: 0 0 auto; }
+    main { max-width: 1100px; padding: 0 42px 60px; }
+    h1 { margin: -23px 0 5px; font-size: 34px; line-height: 1.25; font-weight: 650; }
+    h2 { margin: 6px 0 13px; font-size: 31px; line-height: 1.35; font-weight: 500; }
+    p { margin: 0 0 17px; }
+    ul { margin: 18px 0; padding-left: 51px; }
+    ol { margin: 15px 0 23px; padding-left: 49px; }
+    li { margin: 2px 0; }
+    a { color: #9ec5fe; text-underline-offset: 2px; }
+    code { background: #34373b; border-radius: 4px; padding: 0 5px 1px; font-family: Consolas, "Courier New", monospace; font-size: .92em; white-space: nowrap; }
+    .code-example { margin-top: 28px; background: #292c30; border: 1px solid #4c5054; border-radius: 8px; overflow: hidden; font-family: Consolas, "Courier New", monospace; font-size: 17px; line-height: 1.65; }
+    .code-example__title { padding: 9px 16px; background: #34373b; color: #c8cdd3; font-family: Arial, Helvetica, sans-serif; font-size: 15px; font-weight: 600; }
+    pre { margin: 0; padding: 16px 20px; overflow-x: auto; }
+    .keyword { color: #c792ea; } .string { color: #c3e88d; } .number { color: #f78c6c; } .comment { color: #8d9299; }
+    @media (max-width: 760px) { body { font-size: 17px; } .topbar { gap: 18px; height: 62px; overflow-x: auto; } .topic-bar { padding-left: 24px; height: 38px; } main { padding: 22px 24px 45px; } h1 { margin: 0; font-size: 29px; } h2 { font-size: 27px; } .rail { display: none; } ul { padding-left: 28px; } ol { padding-left: 35px; } }
+  </style>
+</head>
+<body>
+  <nav class="topbar" aria-label="Primary navigation">
+    <a class="nav-link" href="#html">HTML<span class="chevron"></span></a><a class="nav-link" href="#css">CSS<span class="chevron"></span></a><a class="nav-link" href="#javascript">JavaScript<span class="chevron"></span></a><a class="nav-link" href="#web-apis">Web APIs<span class="chevron"></span></a><a class="nav-link" href="#all">All<span class="chevron"></span></a><a class="nav-link" href="#learn">🎓 Learn<span class="chevron"></span></a><a class="nav-link" href="#tools">🛠 Tools<span class="chevron"></span></a><a class="nav-link" href="#about">About<span class="chevron"></span></a><a class="nav-link" href="#blog"><u>Blog</u></a>
+  </nav>
+  <div class="topic-bar">Grammar and types</div>
+  <div class="page"><aside class="rail" aria-hidden="true"></aside><main>
+    <h1>Data structures and types</h1><h2>Data types</h2>
+    <p>The latest ECMAScript standard defines eight data types:</p>
+    <ul><li>Seven data types that are <a href="#primitives">primitives</a>:
+      <ol><li><a href="#boolean">Boolean</a>. <code>true</code> and <code>false</code>.</li><li><a href="#null">null</a>. A special keyword denoting a null value. (Because JavaScript is case-sensitive, <code>null</code> is not the same as <code>Null</code>, <code>NULL</code>, or any other variant.)</li><li><a href="#undefined">undefined</a>. A top-level property whose value is not defined.</li><li><a href="#number">Number</a>. An integer or floating point number. For example: <code>42</code> or <code>3.14159</code>.</li><li><a href="#bigint">BigInt</a>. An integer with arbitrary precision. For example: <code>9007199254740992n</code>.</li><li><a href="#string">String</a>. A sequence of characters that represent a text value. For example: <code>"Howdy"</code>.</li><li><a href="#symbol">Symbol</a>. A data type whose instances are unique and immutable.</li></ol>
+    </li><li>and <a href="#object">Object</a></li></ul>
+    <p>Although these data types are relatively few, they enable you to perform useful operations with your applications. <a href="#functions">Functions</a> are the other fundamental elements of the language.</p>
+    <section class="code-example" aria-label="JavaScript data type examples">
+      <div class="code-example__title">JavaScript data type examples</div>
+      <pre><span class="comment">// Primitive data types</span>
+<span class="keyword">const</span> isLoggedIn = <span class="keyword">true</span>;                 <span class="comment">// Boolean</span>
+<span class="keyword">const</span> emptyValue = <span class="keyword">null</span>;                <span class="comment">// null</span>
+<span class="keyword">let</span> notAssigned;                           <span class="comment">// undefined</span>
+<span class="keyword">const</span> score = <span class="number">42</span>;                          <span class="comment">// Number</span>
+<span class="keyword">const</span> largeNumber = <span class="number">9007199254740992n</span>;      <span class="comment">// BigInt</span>
+<span class="keyword">const</span> greeting = <span class="string">"Howdy"</span>;                 <span class="comment">// String</span>
+<span class="keyword">const</span> uniqueId = Symbol(<span class="string">"id"</span>);             <span class="comment">// Symbol</span>
+
+<span class="comment">// Non-primitive data type</span>
+<span class="keyword">const</span> user = { name: <span class="string">"Alex"</span>, age: <span class="number">25</span> };       <span class="comment">// Object</span></pre>
+    </section>
+  </main></div>
+</body>
+</html>

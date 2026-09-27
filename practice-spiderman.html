@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spider-Man</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            background:#000;
+            color:white;
+            font-family:Arial, Helvetica, sans-serif;
+            overflow-x:hidden;
+        }
+
+        /* Hero */
+
+        .hero{
+            height:100vh;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+        }
+
+        .hero h1{
+            font-size:90px;
+            letter-spacing:8px;
+        }
+
+        .hero h2{
+            color:red;
+            font-size:40px;
+            margin-top:10px;
+            letter-spacing:5px;
+        }
+
+        /* Horizontal Cards */
+
+        .cards{
+            display:flex;
+            overflow-x:auto;
+            overflow-y:hidden; 
+            height:100vh;
+            scroll-snap-type:x mandatory;
+            scrollbar-width:none;
+        }
+
+        .cards::-webkit-scrollbar{
+            display:none;
+        }
+
+        .card{
+            flex:0 0 100vw;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:black;
+            scroll-snap-align:start;
+        }
+
+        .card img{
+            width:80%;
+            height:85%;
+            object-fit:cover;
+            border-radius:20px;
+            box-shadow:0 20px 50px rgba(0,0,0,.7);
+        }
+
+
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>SPIDER-MAN</h1>
+        <h2>MULTIVERSE</h2>
+    </section>
+
+    <section class="cards">
+
+        <div class="card">
+            <img src="image/1.jpg" alt="">
+        </div>
+
+        <div class="card">
+            <img src="image/2.jpg" alt="">
+        </div>
+
+        <div class="card">
+            <img src="image/3.jpg" alt="">
+        </div>
+
+        <div class="card">
+            <img src="image/4.jpg" alt="">
+        </div>
+
+        <div class="card">
+            <img src="image/5.jpg" alt="">
+        </div>
+        
+        <div class="card">
+            <img src="image/6.jpg" alt="">
+        </div>
+        
+        <div class="card">
+            <img src="image/7.jpg" alt="">
+        </div>
+        
+        <div class="card">
+            <img src="image/8.jpg" alt="">
+        </div>
+    </section>
+</body>
+</html>

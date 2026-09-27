@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container1 {
+            height: 750px;
+            width: 1000px;
+            display: grid;
+            gap: 4px;
+            overflow: hidden;
+            /* grid-template-columns: 100px 100px; */
+            /* grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); */
+            /* grid-template-rows: repeat(3, 1fr); */
+            /* grid-template-rows:  100px 100px 100px; */
+            outline: 1px solid black;
+            grid-template-areas: 
+                "box1 box1 box2"
+                "box3 box4 box7"
+                "box5 box6 box7";
+        }
+
+        .container1 > div {
+            font-size: 30px;
+            outline: 1px dashed black;
+            overflow: hidden;
+        }
+        .container1 img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover; 
+        }
+
+
+    </style>
+</head>
+<body> 
+    <div class="container1">
+        <div style="grid-area: box1;"><img src="image/1.jpg" alt="Image 1"></div>
+        <div style="grid-area: box2;"><img src="image/2.jpg" alt="Image 2"></div>
+        <div style="grid-area: box3;"><img src="image/3.jpg" alt="Image 3"></div>
+        <div style="grid-area: box4;"><img src="image/4.jpg" alt="Image 4"></div>
+        <div style="grid-area: box5;"><img src="image/5.jpg" alt="Image 5"></div>
+        <div style="grid-area: box6;"><img src="image/6.jpg" alt="Image 6"></div>
+        <div style="grid-area: box7;"><img src="image/7.jpg" alt="Image 7"></div>
+        
+    </div>
+</body>
+</html>
+
