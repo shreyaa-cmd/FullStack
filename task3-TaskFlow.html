@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TaskFlow</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+        }
+
+        nav {
+            height: 72px;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 24px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav h2 {
+            color: #c026d3;
+        }
+
+        .links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #475569;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .hero {
+            max-width: 650px;
+            min-height: 520px;
+            margin: 80px auto 0;
+            padding: 20px;
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #475569;
+        }
+
+        .buttons {
+            margin-top: 32px;
+
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            background: #c026d3;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #a21caf;
+        }
+
+        .learn {
+            background: white;
+            color: #c026d3;
+            border: 1px solid #c026d3;
+        }
+
+        .features {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 24px;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 32px;
+        }
+
+        .cards {
+            margin-top: 48px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .card {
+            padding: 24px;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+        }
+
+        .card h3 {
+            font-size: 20px;
+        }
+
+        .card p {
+            margin-top: 12px;
+            color: #475569;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 1023px) {
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 639px) {
+            .links {
+                display: none;
+            }
+
+            .menu {
+                display: block;
+            }
+
+            .hero {
+                margin-top: 30px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>Simple Task Flow</h2>
+
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#">Features</a>
+            <a href="#">Progress</a>
+        </div>
+
+        <button class="menu">☰</button>
+    </nav>
+
+
+    <section class="hero">
+
+        <h1>Plan Your Day Better</h1>
+
+            <p>
+            Keep your plans in one place and finish
+            your daily tasks with less stress.
+        </p>
+
+        <div class="buttons">
+            <button>Start Planning</button>
+            <button class="learn">See More</button>
+        </div>
+
+    </section>
+
+
+    <section class="features">
+
+        <h2>How it helps</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Organized</h3>
+                <p>
+                    Make a list and keep track of
+                    the important things for today.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Focused</h3>
+                <p>
+                    Your tasks stay together so you
+                    can work without distractions.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Daily Progress</h3>
+                <p>
+                    Check your progress and see what
+                    you have finished each day.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

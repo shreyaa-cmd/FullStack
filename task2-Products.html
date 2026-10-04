@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ShopKart - Product Listing</title>
+<style>
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: #F8FAFC;
+  color: #111827;
+  font-size: 14px;
+}
+
+/* Header */
+header {
+  background: #FFFFFF;
+  border-bottom: 1px solid #E5E7EB;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo { 
+  font-weight: 700; font-size: 18px; color: #2563EB; 
+}
+header input {
+  padding: 8px 12px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  width: 300px;
+}
+
+/* Layout */
+.layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 32px;
+  padding: 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 16px;
+}
+.sidebar h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 16px 0 8px;
+}
+.sidebar h3:first-child { 
+  margin-top: 0; 
+}
+.sidebar label {
+  display: block;
+  color: #6B7280;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+.apply-btn {
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px;
+  background: #2563EB;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Products grid */
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Product card */
+.card {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+  transition: box-shadow 0.2s ease;
+}
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+.card .image-wrap {
+  height: 220px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #F8FAFC;
+  margin-bottom: 8px;
+}
+.card .image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+
+.category { 
+  color: #6B7280; font-size: 13px; 
+}
+.title { 
+  font-size: 16px; font-weight: 600; 
+}
+.rating {
+   color: #F59E0B; font-size: 13px; 
+  }
+.price-row {
+   display: flex; align-items: baseline; gap: 8px;
+   }
+.price { 
+  font-size: 20px; font-weight: 700; 
+}
+.old-price { 
+  font-size: 14px; text-decoration: line-through; color: #6B7280; 
+}
+.add-btn {
+  margin-top: auto;
+  padding: 10px;
+  background: #2563EB;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.add-btn:hover { background: #1d4ed8; }
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+  }
+  .sidebar h3 { margin: 0; }
+  .products { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Mobile */
+@media (max-width: 639px) {
+  .sidebar { display: none; }
+  .products { grid-template-columns: 1fr; }
+  header input { width: 150px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">ShopKart</div>
+  <input type="text" placeholder="Search for products...">
+</header>
+
+<div class="layout">
+
+  <div class="sidebar">
+    <h3>Category</h3>
+    <label><input type="checkbox"> Laptops</label>
+    <label><input type="checkbox"> Desktops</label>
+    <label><input type="checkbox"> Tablets</label>
+    <label><input type="checkbox"> Accessories</label>
+
+    <h3>Price Range</h3>
+    <label><input type="checkbox"> ₹0 - ₹25,000</label>
+    <label><input type="checkbox"> ₹25,000 - ₹50,000</label>
+    <label><input type="checkbox"> ₹50,000 - ₹75,000</label>
+
+    <h3>Brand</h3>
+    <label><input type="checkbox"> Dell</label>
+    <label><input type="checkbox"> HP</label>
+    <label><input type="checkbox"> Lenovo</label>
+    <label><input type="checkbox"> Apple</label>
+
+    <button class="apply-btn">Apply Filters</button>
+  </div>
+
+  <section class="products">
+
+    <div class="card">
+  
+      <div class="image-wrap"><img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80" alt="Dell Inspiron 15"></div>
+      <div class="category">Laptops</div>
+      <div class="title">Dell Inspiron 15</div>
+      <div class="rating">★ 4.5 (1.2k)</div>
+      <div class="price-row"><span class="price">₹45,990</span><span class="old-price">₹49,990</span></div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+
+    <div class="card">
+
+      <div class="image-wrap"><img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=600&q=80" alt="HP Pavilion"></div>
+      <div class="category">Laptops</div>
+      <div class="title">HP Pavilion</div>
+      <div class="rating">★ 4.3 (892)</div>
+      <div class="price-row"><span class="price">₹52,990</span><span class="old-price">₹58,990</span></div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <div class="image-wrap"><img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=600&q=80" alt="Lenovo IdeaPad"></div>
+      <div class="category">Laptops</div>
+      <div class="title">Lenovo IdeaPad</div>
+      <div class="rating">★ 4.2 (654)</div>
+      <div class="price-row"><span class="price">₹38,990</span></div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+
+    <div class="card">
+
+      <div class="image-wrap"><img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=600&q=80" alt="ASUS Vivobook"></div>
+      <div class="category">Laptops</div>
+      <div class="title">ASUS Vivobook</div>
+      <div class="rating">★ 4.4 (730)</div>
+      <div class="price-row"><span class="price">₹41,990</span></div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <div class="image-wrap"><img src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?auto=format&fit=crop&w=600&q=80" alt="Dell XPS 13"></div>
+      <div class="category">Laptops</div>
+      <div class="title">Dell XPS 13</div>
+      <div class="rating">★ 4.6 (1.4k)</div>
+      <div class="price-row"><span class="price">₹89,990</span></div>
+      <button class="add-btn">Add to Cart</button>
+    </div>
+
+  </section>
+
+</div>
+
+</body>
+</html>
