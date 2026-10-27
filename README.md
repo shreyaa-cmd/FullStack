@@ -17,5 +17,3 @@ This repository is used to track my learning, practice, and projects while study
 ## Author
 
 Shreya Singh
-B.Tech CSE AIML
-3C-45
