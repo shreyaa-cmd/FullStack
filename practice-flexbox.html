@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: lightgray;
+            outline: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .container > div {
+            color: white;
+            width: 100px;
+            height: 100px;
+            align-content: center;
+            text-align: center;
+        }
+
+        #box1 {
+            background-color: black;
+            /* flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 150px; */
+            /* flex: 1 2 150px; grow: 1, shrink: 2, basis: 150px */
+        }
+        
+        #box2 {
+            background-color: green;
+            /* flex-grow: 1;
+            flex-shrink: 2;
+            flex-basis: 150px; */
+            /* flex: 0 1 150px; */
+        }
+        
+        #box3 {
+            background-color: blue;
+            /* flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 150px; */
+        }
+
+        #box4 {
+            background-color: red;
+            /* flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 150px; */
+        }
+
+        #box5 {
+            background-color: yellow;
+            color: black;
+            /* flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 150px; */
+        }
+
+        #box6 {
+            background-color: purple;
+            /* flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: 150px; */
+        }
+       
+    </style>
+</head>
+<body> 
+    <div class="container">
+        <div id="box1">Box 1</div>
+        <div id="box2">Box 2</div>
+        <div id="box3">Box 3</div>
+        <div id="box4">Box 4</div>
+        <div id="box5">Box 5</div>
+        <div id="box6">Box 6</div>
+    </div>
+</body>
+</html>

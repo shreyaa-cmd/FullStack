@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cards</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            background:#f2f2f2;
+            font-family:Arial, sans-serif;
+        }
+
+        .container{
+            width:90%;
+            margin:30px auto;
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:space-between;
+        }
+
+        .card{
+            width:30%;
+            background:white;
+            margin-bottom:20px;
+            padding:15px;
+            text-align:center;
+            border-radius:10px;
+            box-shadow:0 0 10px lightgray;
+        }
+
+        .card img{
+            width:100%;
+            height:200px;
+            object-fit:cover;
+            border-radius:8px;
+        }
+
+        .card h3{
+            margin:15px 0 10px;
+        }
+
+        .card p{
+            margin-bottom:10px;
+            color:green;
+            font-size:18px;
+        }
+
+        .card button{
+            width:100%;
+            padding:10px;
+            background: blue;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        .card button:hover{
+            background:darkblue;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card">
+        <img src="https://picsum.photos/200?random=1" alt="Product">
+        <h3>Product 1</h3>
+        <p>$100</p>
+        <button>Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/200?random=2" alt="Product">
+        <h3>Product 2</h3>
+        <p>$120</p>
+        <button>Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/200?random=3" alt="Product">
+        <h3>Product 3</h3>
+        <p>$150</p>
+        <button>Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/200?random=4" alt="Product">
+        <h3>Product 4</h3>
+        <p>$180</p>
+        <button>Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/200?random=5" alt="Product">
+        <h3>Product 5</h3>
+        <p>$200</p>
+        <button>Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/200?random=6" alt="Product">
+        <h3>Product 6</h3>
+        <p>$220</p>
+        <button>Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/200?random=7" alt="Product">
+        <h3>Product 7</h3>
+        <p>$250</p>
+        <button>Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/200?random=8" alt="Product">
+        <h3>Product 8</h3>
+        <p>$280</p>
+        <button>Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/200?random=9" alt="Product">
+        <h3>Product 9</h3>
+        <p>$300</p>
+        <button>Buy Now</button>
+    </div>
+
+</div>
+
+</body>
+</html>

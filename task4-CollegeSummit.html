@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>College Tech Summit</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8fafc;
+            color: #172033;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        .navbar {
+            background: white;
+            border-bottom: 1px solid #e5eaf0;
+        }
+
+        .nav-container {
+            width: 92%;
+            max-width: 1200px;
+            height: 58px;
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            color: #9d174d;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .logo-icon {
+            width: 26px;
+            height: 26px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #fce7f3;
+            border-radius: 50%;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+
+            font-size: 10px;
+        }
+
+        .nav-links a {
+            color: #344054;
+        }
+
+        .register-btn {
+            background: #db2777;
+            color: white !important;
+
+            padding: 9px 15px;
+            border-radius: 5px;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 20px;
+        }
+
+
+        .hero {
+            min-height: 255px;
+
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            background-image: url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1400&q=80");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero::before {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background: rgba(55, 10, 45, 0.68);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+
+            color: white;
+        }
+
+        .hero-tag {
+            display: inline-block;
+
+            background: #db2777;
+
+            padding: 5px 11px;
+            border-radius: 12px;
+
+            font-size: 9px;
+
+            margin-bottom: 10px;
+        }
+
+        .hero h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .hero p {
+            font-size: 14px;
+            margin-bottom: 17px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 9px 17px;
+
+            border-radius: 5px;
+
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background: #7e22ce;
+        }
+
+        .btn-outline {
+            border: 1px solid white;
+        }
+
+
+            @media (max-width: 640px) {
+
+                .nav-links {
+                    display: none;
+                }
+
+                .menu-icon {
+                    display: block;
+                }
+
+                .hero {
+                    min-height: 210px;
+                }
+
+                .hero h1 {
+                    font-size: 21px;
+                }
+
+                .hero p {
+                    font-size: 10px;
+                }
+
+                .btn {
+                    font-size: 8px;
+                    padding: 8px 12px;
+                }
+
+            }
+
+    .event-details {
+        padding: 20px 0;
+    }
+
+    .container {
+        width: 92%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .event-details h2 {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+
+    .details-grid {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 10px;
+    }
+
+
+    .detail-card {
+        background: white;
+
+        border: 1px solid #dce8f5;
+
+        border-radius: 7px;
+
+        padding: 12px;
+
+        display: flex;
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+
+
+    .detail-icon {
+        width: 32px;
+        height: 32px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: #fdf2f8;
+
+        border-radius: 7px;
+
+        font-size: 15px;
+    }
+
+
+    .detail-card span {
+        color: #667085;
+
+        font-size: 9px;
+    }
+
+
+    .detail-card h3 {
+        font-size: 10px;
+
+        margin: 3px 0;
+    }
+
+
+    .detail-card p {
+        color: #667085;
+
+        font-size: 8px;
+    }
+
+
+    @media (max-width: 640px) {
+
+        .details-grid {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <div class="logo">
+
+                <span>
+                    Student Tech Club
+                </span>
+
+            </div>
+
+
+            <nav class="nav-links">
+
+                <a href="#">
+                    Home
+                </a>
+
+                <a href="#">
+                    Speakers
+                </a>
+
+                <a href="#">
+                    Schedule
+                </a>
+
+                <a href="#">
+                    Contact
+                </a>
+
+                <a href="#" class="register-btn">
+                    Join Event
+                </a>
+
+            </nav>
+
+
+            <div class="menu-icon">
+                ☰
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-tag">
+                Learn • Create • Connect
+            </div>
+
+            <h1>
+                STUDENT TECH DAY
+            </h1>
+
+            <p>
+                A day of ideas, projects and technology
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#" class="btn btn-primary">
+                    Join Event
+                </a>
+
+                <a href="#schedule" class="btn btn-outline">
+                    See Schedule
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="event-details">
+
+        <div class="container">
+
+            <h2>
+                Summit Details
+            </h2>
+
+
+            <div class="details-grid">
+
+
+                <div class="detail-card">
+
+                    <div class="detail-icon">
+                        📅
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Date
+                        </span>
+
+                        <h3>
+                            22 October 2026
+                        </h3>
+
+                        <p>
+                            Thursday
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="detail-card">
+
+                    <div class="detail-icon">
+                        📍
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Venue
+                        </span>
+
+                        <h3>
+                            College Hall
+                        </h3>
+
+                        <p>
+                            Main Campus
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="detail-card">
+
+                    <div class="detail-icon">
+                        👥
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Speakers
+                        </span>
+
+                        <h3>
+                            18+
+                        </h3>
+
+                        <p>
+                            Guest Speakers
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section> 
+
+
+</body>
+
+</html>

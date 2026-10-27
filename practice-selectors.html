@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0px;
+        }
+        
+        #myId{
+            color: red;
+        }
+
+        .myClass{
+            color: blue;
+            text-shadow: 0px 0px 5px black;
+        }
+
+        h2{
+            color: green;
+        }
+
+        input[type = email]{
+            border: 2px solid red;
+        }
+
+        input[type = password]{
+            border: 2px solid blue;
+        }
+
+        li[data = "null"] {
+            color: purple;
+        }
+        
+    </style>
+</head>
+<body>
+    <h2> <u> Selectors </u> </h2>
+    <ul>
+        <li class="myClass">Universal</li>
+        <li id = "myId">Id</li>
+        <li class = "myClass">Class</li>
+        <li>Element</li>
+        <li data = "null">Attribute</li>
+        <li>Combinators</li>
+        <li>Pseudo Class</li>
+        <li>Pseudo Element</li>
+
+        <input type = email placeholder = "Enter your email" required>
+        <input type = password placeholder = "Enter your password" required> 
+    </ul>
+</body> 
+</html>

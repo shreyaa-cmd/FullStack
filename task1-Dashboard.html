@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shreya Singh Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-100 text-slate-900">
+
+    <div class="flex min-h-screen">
+
+        <aside class="sidebar w-[240px] bg-slate-900 text-slate-300 p-5 sticky top-0 h-screen">
+
+            <h2 class="text-white text-xl font-bold mb-8">◉ Dashboard</h2>
+
+            <div class="flex flex-col gap-2 text-sm">
+
+                <div class="bg-violet-600 text-white p-3 rounded">
+                    ▣ Home
+                </div>
+
+                <div class="p-3">
+                    ◩ Analytics
+                </div>
+
+                <div class="p-3">
+                    ♙ Users
+                </div>
+
+                <div class="p-3">
+                    🛒 Orders
+                </div>
+
+                <div class="p-3">
+                    ▣ Products
+                </div>
+
+                <div class="p-3">
+                    ⚙ Settings
+                </div>
+
+            </div>
+
+            <div class="absolute bottom-5 left-5 flex items-center gap-2">
+                <div class="w-8 h-8 bg-rose-400 rounded-full flex items-center justify-center text-white">
+                    S
+                </div>
+
+                <div>
+                    <p class="text-white text-sm">Shreya Singh</p>
+                    <p class="text-xs">Admin</p>
+                </div>
+            </div>
+
+        </aside>
+
+
+        <div class="flex-1 min-w-0">
+
+            <header class="h-16 bg-white border-b border-slate-200 px-8 flex items-center justify-between">
+
+                <button class="menu hidden text-xl">
+                    ☰
+                </button>
+
+                <input
+                    type="text"
+                    placeholder="Search..."
+                    class="w-64 border border-slate-200 rounded px-3 py-2 text-sm"
+                >
+
+                <div class="flex items-center gap-5">
+                    <span>♧</span>
+
+                    <div class="w-8 h-8 bg-rose-400 rounded-full flex items-center justify-center text-white">
+                        S
+                    </div>
+                </div>
+
+            </header>
+
+
+            <main class="p-8">
+
+                <div class="flex items-center justify-between mb-6">
+                    <h1 class="text-2xl font-bold">Overview</h1>
+                </div>
+
+
+                <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+
+                    <div class="bg-white p-5 rounded-xl border border-slate-200">
+                        <p class="text-sm font-medium text-slate-500">Revenue</p>
+                        <h2 class="text-[28px] font-bold mt-2">₹1,36,842</h2>
+                        <p class="text-sm text-emerald-600 mt-2">↑ 15% from last month</p>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-xl border border-slate-200">
+                        <p class="text-sm font-medium text-slate-500">Orders</p>
+                        <h2 class="text-[28px] font-bold mt-2">746</h2>
+                        <p class="text-sm text-emerald-600 mt-2">↑ 8% from last month</p>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-xl border border-slate-200">
+                        <p class="text-sm font-medium text-slate-500">Users Online</p>
+                        <h2 class="text-[28px] font-bold mt-2">4,128</h2>
+                        <p class="text-sm text-emerald-600 mt-2">↑ 11% from last month</p>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-xl border border-slate-200">
+                        <p class="text-sm font-medium text-slate-500">Conversion</p>
+                        <h2 class="text-[28px] font-bold mt-2">5.1%</h2>
+                        <p class="text-sm text-emerald-600 mt-2">↑ 3% from last month</p>
+                    </div>
+
+                </section>
+
+
+                <section class="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-6 mb-6">
+
+                    <div class="bg-white p-5 rounded-xl border border-slate-200">
+
+                        <div class="flex justify-between items-center mb-5">
+                            <h2 class="font-semibold">Revenue Overview</h2>
+                            <p class="font-semibold">₹1,36,842</p>
+                        </div>
+
+                        <div class="h-56 flex items-end gap-4 border-b border-slate-200">
+
+                            <div class="w-8 bg-violet-200 h-20"></div>
+                            <div class="w-8 bg-violet-300 h-14"></div>
+                            <div class="w-8 bg-violet-300 h-24"></div>
+                            <div class="w-8 bg-violet-400 h-32"></div>
+                            <div class="w-8 bg-violet-400 h-24"></div>
+                            <div class="w-8 bg-violet-500 h-36"></div>
+                            <div class="w-8 bg-violet-500 h-44"></div>
+                            <div class="w-8 bg-violet-600 h-40"></div>
+
+                        </div>
+
+                        <div class="flex justify-between text-xs text-slate-500 mt-2">
+                            <span>Jan</span>
+                            <span>Feb</span>
+                            <span>Mar</span>
+                            <span>Apr</span>
+                            <span>May</span>
+                            <span>Jun</span>
+                            <span>Jul</span>
+                            <span>Aug</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="bg-white p-5 rounded-xl border border-slate-200">
+
+                        <div class="flex justify-between items-center mb-5">
+                            <h2 class="font-semibold">Recent Orders</h2>
+                            <span class="text-violet-600 text-sm">View all</span>
+                        </div>
+
+                        <div class="overflow-x-auto">
+
+                            <table class="w-full text-sm">
+                                <tr class="text-slate-500">
+                                    <td class="py-2">Customer</td>
+                                    <td class="py-2">Amount</td>
+                                    <td class="py-2">Status</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="py-2">Ananya Mehta</td>
+                                    <td class="py-2">₹3,249</td>
+                                    <td class="py-2 text-emerald-600">Delivered</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="py-2">Karan Joshi</td>
+                                    <td class="py-2">₹2,799</td>
+                                    <td class="py-2 text-amber-600">Processing</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="py-2">Meera Nair</td>
+                                    <td class="py-2">₹1,899</td>
+                                    <td class="py-2 text-cyan-600">Shipped</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="py-2">Dev Malhotra</td>
+                                    <td class="py-2">₹4,299</td>
+                                    <td class="py-2 text-emerald-600">Delivered</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="py-2">Ishita Roy</td>
+                                    <td class="py-2">₹3,999</td>
+                                    <td class="py-2 text-red-600">Cancelled</td>
+                                </tr>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <section class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+                    <div class="bg-white p-5 rounded-xl border border-slate-200">
+
+                        <div class="flex justify-between items-center mb-5">
+                            <h2 class="font-semibold">Traffic Overview</h2>
+                            <span class="text-emerald-600 text-sm">↑ 13%</span>
+                        </div>
+
+                        <h3 class="text-xl font-bold">9,184</h3>
+                        <p class="text-sm text-slate-500 mb-5">Total Visitors</p>
+
+                        <div class="h-48 flex items-end gap-4">
+
+                            <div class="w-8 bg-cyan-400 h-20"></div>
+                            <div class="w-8 bg-cyan-400 h-16"></div>
+                            <div class="w-8 bg-cyan-400 h-28"></div>
+                            <div class="w-8 bg-cyan-500 h-24"></div>
+                            <div class="w-8 bg-cyan-500 h-40"></div>
+                            <div class="w-8 bg-cyan-500 h-36"></div>
+                            <div class="w-8 bg-cyan-600 h-48"></div>
+                            <div class="w-8 bg-cyan-600 h-44"></div>
+
+                        </div>
+
+                        <div class="flex justify-between text-xs text-slate-500 mt-2">
+                            <span>Mon</span>
+                            <span>Tue</span>
+                            <span>Wed</span>
+                            <span>Thu</span>
+                            <span>Fri</span>
+                            <span>Sat</span>
+                            <span>Sun</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="bg-white p-5 rounded-xl border border-slate-200">
+
+                        <div class="flex justify-between items-center mb-5">
+                            <h2 class="font-semibold">Top Products</h2>
+                            <span class="text-sm text-slate-500">Sales</span>
+                        </div>
+
+                        <div class="overflow-x-auto">
+
+                            <table class="w-full text-sm">
+
+                                <tr class="text-slate-500">
+                                    <td class="py-3">Product</td>
+                                    <td class="py-3">Sales</td>
+                                    <td class="py-3">Change</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="py-3">Laptop Air</td>
+                                    <td class="py-3">2,186</td>
+                                    <td class="py-3 text-emerald-600">+15%</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="py-3">Smart Speaker</td>
+                                    <td class="py-3">1,674</td>
+                                    <td class="py-3 text-emerald-600">+10%</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="py-3">Wireless Earbuds</td>
+                                    <td class="py-3">1,428</td>
+                                    <td class="py-3 text-emerald-600">+7%</td>
+                                </tr>
+
+                                <tr>
+                                    <td class="py-3">Smart Watch</td>
+                                    <td class="py-3">986</td>
+                                    <td class="py-3 text-emerald-600">+5%</td>
+                                </tr>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+
+    </div>
+
+
+    <style>
+
+        @media (max-width: 767px) {
+
+            .sidebar {
+                display: none;
+            }
+
+            .menu {
+                display: block;
+            }
+
+            header {
+                width: 100%;
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            header input {
+                width: 180px;
+            }
+
+            main {
+                padding: 16px;
+            }
+
+        }
+
+    </style>
+
+</body>
+</html>
